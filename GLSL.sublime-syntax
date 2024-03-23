@@ -3,11 +3,34 @@
 # Modified version of:
 # http://www.sublimetext.com/docs/3/syntax.html
 # https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.50.pdf
-name: Jitter shader
+name: GLSL and Jitter
 file_extensions:
   - jxs
   - jxp
+  - vs
+  - fs
+  - gs
+  - vsh
+  - fsh
+  - gsh
+  - vshader
+  - fshader
+  - gshader
+  - vert
+  - frag
+  - geom
+  - tesc
+  - tese
+  - comp
   - glsl
+  - mesh
+  - task
+  - rgen
+  - rint
+  - rahit
+  - rchit
+  - rmiss
+  - rcall
 first_line_match: -[*]-( Mode:)? GLSL -[*]-
 scope: source.glsl
 
@@ -53,6 +76,7 @@ variables:
         CAMERA_POSITION |
         CAMERA_DIRECTION |
         VIEWPORT |
+        NORMALS |
         INVERSE_VIEWPORT |
         LIGHT_VIEWPROJ_MATRIX[0-7] |
         LIGHT_RANGE[0-7] |
@@ -184,6 +208,12 @@ variables:
         bind |
         pass |
         file |
+        input |
+        output |
+        source |
+        history |
+        inputs |
+        outputs |
         transform |
         subpass |
         program |
@@ -214,6 +244,7 @@ variables:
         volatile |
         jit_in |
         jit_out |
+        gl_in |
         restrict
       )\b
   
@@ -245,7 +276,6 @@ variables:
         fixed |
         unsigned |
         superp |
-        output |
         hvec2 |
         hvec3 |
         hvec4 |
